@@ -1,0 +1,22 @@
+DROP DATABASE IF EXISTS bd_api_iot;
+CREATE DATABASE bd_api_iot CHARSET utf8mb4;
+USE bd_api_iot;
+
+CREATE TABLE variables_tph (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    sensor_tamaño_mineral FLOAT(11) NOT NULL,
+    flujometro_agua FLOAT(11) NOT NULL,
+    velocidad_molino FLOAT(11) NOT NULL,
+    potencia_molino FLOAT(11) NOT NULL,
+    presion_descanso FLOAT(11) NOT NULL,
+    TPH FLOAT(11) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO variables_tph(sensor_tamaño_mineral, flujometro_agua, velocidad_molino,     
+                        potencia_molino, presion_descanso, TPH) VALUES(3000, 250, 75, 2000, 180, 210);
+INSERT INTO variables_tph(sensor_tamaño_mineral, flujometro_agua, velocidad_molino,     
+                        potencia_molino, presion_descanso, TPH) VALUES(3034, 210, 80, 2140, 200, 230);
+INSERT INTO variables_tph(sensor_tamaño_mineral, flujometro_agua, velocidad_molino,     
+                        potencia_molino, presion_descanso, TPH) VALUES(3500, 280, 90, 1980, 190, 250);
+commit;
